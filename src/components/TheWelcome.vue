@@ -76,7 +76,7 @@
 
       <div class="relative z-20 text-center px-4 sm:px-6 lg:px-8">
         <Transition name="terminal-boot" appear>
-          <div v-if="mounted" class="space-y-8">
+          <div v-if="mounted" class="space-y-8 mt-24">
             <!-- Terminal Window -->
             <div class="terminal-window max-w-5xl mx-auto cyber-card-3d mt-10">
               <div class="terminal-header">
@@ -601,7 +601,7 @@
           <div class="terminal-line">
             <span class="text-green-500">></span>
             <span class="ml-2 text-green-400">System uptime: <span class="animate-pulse glow-text">{{ uptime
-                }}</span></span>
+            }}</span></span>
           </div>
           <div class="terminal-line">
             <span class="text-green-500">></span>

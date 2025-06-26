@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "homepage": "https://tereza.gjdev.tech",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -13,7 +14,9 @@
     "lint:oxlint": "oxlint . --fix -D correctness --ignore-path .gitignore",
     "lint:eslint": "eslint . --fix",
     "lint": "run-s lint:*",
-    "format": "prettier --write src/"
+    "format": "prettier --write src/",
+    "build_prod": "vue-cli-service build",
+    "deploy": "NODE_ENV=production npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@google/genai": "^1.6.0",
@@ -22,6 +25,7 @@
     "@vueuse/core": "^13.4.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gh-pages": "^6.3.0",
     "lucide-vue-next": "^0.523.0",
     "pinia": "^3.0.1",
     "reka-ui": "^2.3.1",
