@@ -1,0 +1,153 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+
+.theme-toggle-container {
+  @apply flex items-center gap-3;
+}
+
+.theme-toggle-switch {
+  @apply relative inline-flex items-center justify-center;
+  @apply w-16 h-8 sm:w-20 sm:h-10;
+  @apply rounded-full border-2 border-transparent;
+  @apply transition-all duration-300 ease-in-out;
+  @apply focus:outline-none focus:ring-4 focus:ring-opacity-50;
+  @apply cursor-pointer select-none;
+  @apply hover:scale-105 active:scale-95;
+}
+
+.theme-toggle-switch--light {
+  @apply bg-gradient-to-r from-blue-400 to-blue-500;
+  @apply focus:ring-blue-300;
+  @apply shadow-lg shadow-blue-200;
+}
+
+.theme-toggle-switch--dark {
+  @apply bg-gradient-to-r from-purple-600 to-indigo-700;
+  @apply focus:ring-purple-300;
+  @apply shadow-lg shadow-purple-200;
+}
+
+.theme-toggle-track {
+  @apply relative w-full h-full rounded-full overflow-hidden;
+}
+
+.theme-toggle-indicator {
+  @apply absolute top-1 left-1 bottom-1;
+  @apply w-6 h-6 sm:w-8 sm:h-8;
+  @apply bg-white rounded-full;
+  @apply shadow-lg;
+  @apply transition-all duration-300 ease-in-out;
+  @apply flex items-center justify-center;
+}
+
+.theme-toggle-indicator--light {
+  @apply transform translate-x-0;
+}
+
+.theme-toggle-indicator--dark {
+  @apply transform translate-x-8 sm:translate-x-10;
+}
+
+.theme-toggle-icon-container {
+  @apply relative w-full h-full flex items-center justify-center;
+}
+
+.theme-toggle-icon {
+  @apply w-4 h-4 sm:w-5 sm:h-5;
+  @apply text-gray-700;
+  @apply transition-all duration-200;
+}
+
+.theme-toggle-bg-icons {
+  @apply absolute inset-0 flex items-center justify-between px-2;
+  @apply pointer-events-none;
+}
+
+.theme-toggle-bg-icon {
+  @apply w-3 h-3 sm:w-4 sm:h-4;
+  @apply text-white text-opacity-60;
+  @apply transition-all duration-300;
+}
+
+.theme-toggle-bg-icon--sun {
+  @apply ml-1;
+}
+
+.theme-toggle-bg-icon--moon {
+  @apply mr-1;
+}
+
+.theme-toggle-switch--dark .theme-toggle-bg-icon--moon {
+  @apply text-opacity-80;
+}
+
+.theme-toggle-switch--light .theme-toggle-bg-icon--sun {
+  @apply text-opacity-80;
+}
+
+.theme-toggle-label {
+  @apply text-sm font-medium text-gray-700 dark:text-gray-300;
+  @apply transition-colors duration-300;
+  @apply select-none;
+}
+
+/* Icon transition animations */
+.icon-fade-enter-active,
+.icon-fade-leave-active {
+  transition: all 0.2s ease-in-out;
+}
+
+.icon-fade-enter-from {
+  opacity: 0;
+  transform: rotate(-90deg) scale(0.8);
+}
+
+.icon-fade-leave-to {
+  opacity: 0;
+  transform: rotate(90deg) scale(0.8);
+}
+
+.icon-fade-enter-to,
+.icon-fade-leave-from {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .theme-toggle-container {
+    @apply gap-2;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .theme-toggle-switch {
+    @apply border-2 border-gray-800;
+  }
+
+  .theme-toggle-indicator {
+    @apply border-2 border-gray-800;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .theme-toggle-switch,
+  .theme-toggle-indicator,
+  .theme-toggle-icon,
+  .theme-toggle-bg-icon,
+  .theme-toggle-label {
+    @apply transition-none;
+  }
+
+  .icon-fade-enter-active,
+  .icon-fade-leave-active {
+    transition: none;
+  }
+}
+
+/* Dark mode styles for the component itself */
+:global(.dark) .theme-toggle-label {
+  @apply text-gray-300;
+}
