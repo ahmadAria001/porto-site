@@ -601,7 +601,7 @@
           <div class="terminal-line">
             <span class="text-green-500">></span>
             <span class="ml-2 text-green-400">System uptime: <span class="animate-pulse glow-text">{{ uptime
-            }}</span></span>
+                }}</span></span>
           </div>
           <div class="terminal-line">
             <span class="text-green-500">></span>
@@ -616,7 +616,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onUnmounted } from 'vue'
+import { ref, onMounted, onUnmounted, } from 'vue'
 import {
   MenuIcon,
   XIcon,
@@ -718,7 +718,12 @@ const animateSkills = () => {
 // Floating particles
 const particles = ref<{
   class: string,
-  style: any
+  style: {
+    left: string;
+    top: string;
+    animationDelay: string;
+    animationDuration: string;
+  };
 }[]>([])
 
 const createParticles = () => {

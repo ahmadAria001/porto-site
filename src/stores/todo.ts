@@ -73,11 +73,11 @@ export const useTodoStore = defineStore('todo', {
         return state.todos
       }
 
-      return state.todos.filter((todo) => todo.progress == state.filter)
+      return state.todos.filter((todo) => todo.progress == (state.filter as unknown as PROGRESS))
     },
     /** @type {Todo[]} */
     remainingTodos: (state) => {
-      return state.todos.filter((todo) => todo.progress != state.filter)
+      return state.todos.filter((todo) => todo.progress != (state.filter as unknown as PROGRESS))
     },
     /** @type {Todo[]} */
     allTodos: (state) => {

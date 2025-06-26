@@ -15,6 +15,7 @@ import Badge from '@/components/ui/badge/Badge.vue';
 import { CheckIcon, Edit3, Loader2, PackageOpen, StopCircle, Trash, UploadIcon, } from 'lucide-vue-next';
 import { Table, TableRow, TableHead, TableCell, TableBody, TableHeader } from '@/components/ui/table';
 import Input from '@/components/ui/input/Input.vue';
+import { ulid } from 'ulid';
 
 const store = useTodoStore();
 const { setFilter, setProgress, add, remove } = store;
@@ -48,7 +49,12 @@ const resetStates = () => {
 }
 
 const handleAddNew = () => {
-  add(formAddNew);
+  add({
+    title: formAddNew.title,
+    description: formAddNew.description,
+    id: ulid(),
+    progress: PROGRESS.todo,
+  });
   resetFormAddNew();
 }
 
