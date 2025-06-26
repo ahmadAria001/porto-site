@@ -1,6 +1,6 @@
 {
-  "name": "image-gen-gemini",
-  "version": "0.0.0",
+  "name": "porto-site",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
