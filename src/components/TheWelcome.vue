@@ -327,11 +327,11 @@
                     <div class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <span class="text-green-500">Experience:</span>
-                        <span class="text-green-300">~ {{ experience_years }} years building</span>
+                        <span class="text-green-300">~{{ experience_years }} years building</span>
                       </div>
                       <div class="flex justify-between">
                         <span class="text-green-500">Projects:</span>
-                        <span class="text-green-300">5+ completed</span>
+                        <span class="text-green-300">3+ completed</span>
                       </div>
                       <div class="flex justify-between">
                         <span class="text-green-500">Status:</span>
