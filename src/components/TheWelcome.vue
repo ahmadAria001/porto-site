@@ -448,10 +448,10 @@
                         <ExternalLinkIcon class="w-4 h-4" />
                         Launch
                       </button>
-                      <button v-if="project.github" @click="openProject(project.github)"
+                      <!-- <button v-if="project.github" @click="openProject(project.github)"
                         class="cyber-button-secondary text-sm py-2 px-3 rounded-lg transition-all duration-300 hover:scale-105 flex items-center justify-center">
                         <GithubIcon class="w-4 h-4" />
-                      </button>
+                      </button> -->
                     </div>
                   </div>
                 </div>
