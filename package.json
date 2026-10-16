@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://tereza.gjdev.tech",
+  "homepage": "https://tereza.rumpadse.site",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -16,7 +16,7 @@
     "lint": "run-s lint:*",
     "format": "prettier --write src/",
     "build_prod": "vue-cli-service build",
-    "deploy": "NODE_ENV=production npm run build && gh-pages -d dist"
+    "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
     "@google/genai": "^1.6.0",
