@@ -213,7 +213,7 @@
                 </div>
                 <div class="terminal-content p-6 space-y-4 text-green-300">
                   <p class="leading-relaxed">
-                    <span class="text-green-500">></span> Passionate full-stack developer from Indonesia with 2+ years
+                    <span class="text-green-500">></span> Passionate full-stack developer from Indonesia with 2 years
                     of experience
                     in crafting modern web applications. Specialized in Laravel, Vue.js, and
                     enterprise-level solutions.
@@ -261,11 +261,11 @@
                     <div class="space-y-2 text-sm">
                       <div class="flex justify-between">
                         <span class="text-green-500">Experience:</span>
-                        <span class="text-green-300">2+ years</span>
+                        <span class="text-green-300">2 years</span>
                       </div>
                       <div class="flex justify-between">
                         <span class="text-green-500">Projects:</span>
-                        <span class="text-green-300">15+ completed</span>
+                        <span class="text-green-300">5+ completed</span>
                       </div>
                       <div class="flex justify-between">
                         <span class="text-green-500">Status:</span>
@@ -784,7 +784,7 @@ const initMatrix = () => {
 const technologies = [
   'Laravel', 'PHP', 'Vue.js', 'React', 'Node.js', 'TypeScript', 'JavaScript',
   'MySQL', 'PostgreSQL', 'MariaDB', 'Tailwind CSS', 'Bootstrap', 'Svelte',
-  'Python', 'Java', 'C#', 'Git', 'Docker', 'Linux', 'AWS'
+  'Python', 'Java', 'C#', 'Git', 'Docker', 'Linux',
 ]
 
 const skills = [
@@ -814,11 +814,11 @@ const skills = [
 const experiences = [
   {
     id: ulid(),
-    position: 'Full Stack Developer',
+    position: 'Full Web Stack Developer',
     company: 'Freelance',
     period: '2022 - Present',
-    description: 'Developing enterprise-level web applications, ERP systems, and healthcare management platforms using Laravel, Vue.js, and modern web technologies.',
-    technologies: ['Laravel', 'Vue.js', 'PHP', 'MySQL', 'Tailwind CSS']
+    description: 'Developing enterprise-level web applications, ERP systems, and healthcare management platforms using Laravel, Vue.js, React, and modern web technologies.',
+    technologies: ['Laravel', 'Vue.js', 'PHP', 'MySQL', 'Tailwind CSS', 'React', 'Typescript']
   },
   {
     id: ulid(),
@@ -826,11 +826,26 @@ const experiences = [
     company: 'Various Projects',
     period: '2021 - 2022',
     description: 'Built responsive websites and web applications for small to medium businesses, focusing on user experience and performance optimization.',
-    technologies: ['PHP', 'JavaScript', 'HTML/CSS', 'MySQL']
+    technologies: ['Laravel', 'Vue.js', 'PHP', 'MySQL', 'Tailwind CSS', 'Typescript']
   }
 ]
 
 const projects = [
+  {
+    id: ulid(),
+    title: 'SIM PKB Kulon Progo', // SISTEM INFORMASI MANAGEMENT PEMERIKSAAN KENDARAAN BERMOTOR (SIM PKB)
+    description: 'Sistem informasi management pemeriksaan kendaraan bermotor (SIM PKB) for Dishub Kulon Progo.',
+    technologies: ['Laravel', 'Vue', 'PHP', 'Tailwind CSS', 'MySQL'],
+    // img_path: '/erp.jpg'
+  },
+  {
+    id: ulid(),
+    title: 'Sales Management System',
+    description: 'Multi-tenant sales management system for PT. Stindo, enabling online administrative processes.',
+    technologies: ['Laravel', 'React', 'PHP', 'Tailwind CSS', 'MariaDB', 'Typescript'],
+    // url: 'https://github.com/ahmadAria001/KawanDesa',
+    // github: 'https://github.com/ahmadAria001/KawanDesa'
+  },
   {
     id: ulid(),
     title: 'RSUD Prambanan Training System',
@@ -839,21 +854,6 @@ const projects = [
     url: 'https://pelatihan.rsudprambanan.com',
     img_path: '/rsud.png'
   },
-  {
-    id: ulid(),
-    title: 'Enterprise ERP System',
-    description: 'Full-featured Enterprise Resource Planning system with modules for inventory, finance, HR, and reporting with role-based access control.',
-    technologies: ['Laravel', 'React', 'PHP', 'Tailwind CSS', 'MariaDB'],
-    img_path: '/erp.jpg'
-  },
-  {
-    id: ulid(),
-    title: 'Kawan Desa',
-    description: 'Digital village management platform for Indonesian districts, enabling online administrative processes and community engagement.',
-    technologies: ['Laravel', 'Svelte', 'PHP', 'Tailwind CSS', 'MariaDB'],
-    url: 'https://github.com/ahmadAria001/KawanDesa',
-    github: 'https://github.com/ahmadAria001/KawanDesa'
-  }
 ]
 
 // Contact form
